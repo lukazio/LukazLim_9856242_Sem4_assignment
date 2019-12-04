@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_contact"
+        android:title="@string/menu_contact" />
+    <item
+        android:id="@+id/menu_email"
+        android:title="@string/menu_email" />
+    <item
+        android:id="@+id/menu_location"
+        android:title="@string/menu_location" />
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/ic_share_white_24dp"
+        android:title="@string/menu_share"
+        app:showAsAction="always" />
+</menu>

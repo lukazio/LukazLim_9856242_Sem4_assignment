@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">bookappa</string>
+    <string name="app_title">bookappa</string>
+
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="unit_hint">Unit</string>
+    <string name="floor_hint">Floor</string>
+    <string name="name_hint">Owner Name</string>
+
+    <string name="login_label">Login</string>
+    <string name="floor_label">Floor</string>
+    <string name="unit_label">Unit</string>
+
+    <string name="menu_logout">Logout</string>
+    <string name="menu_about">About</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_email">Email</string>
+    <string name="menu_location">Location</string>
+    <string name="menu_share">Share...</string>
+
+    <string name="title_managerlogin">Manager Login</string>
+    <string name="title_mainmenu">House Booking</string>
+    <string name="title_about">About App &amp; Dev</string>
+    <string name="title_help">Login Help</string>
+    <string name="title_booking">Make Booking</string>
+    <string name="title_booklist">Booking List - All</string>
+    <string name="title_prices">Prices</string>
+    <string name="title_summary">Sales Summary</string>
+    <string name="title_booklist_paid">Booking List - Paid</string>
+    <string name="title_booklist_unpaid">Booking List - Unpaid</string>
+
+    <string name="button_bookunit">Book Unit</string>
+    <string name="button_bookings">Bookings</string>
+    <string name="button_login">Login</string>
+    <string name="button_summary">Summary</string>
+    <string name="button_bookcheck">Check</string>
+    <string name="button_booksubmit">Confirm Booking</string>
+    <string name="button_showunpaid">Show Unpaid</string>
+    <string name="button_showpaid">Show Paid</string>
+
+    <string name="app_info">This app is for sales managers to keep track of unit bookings and payments.\n\nThere are only admin accounts as the app is not intended for public use.\n\nIn this prototype, there is only one admin account.</string>
+    <string name="login_info">Enter manager username and password\n\nContact system admin if you don\'t have account yet or if there is an issue\n\n(In this prototype, username is \'admin\' and password is \'pwd123456\')</string>
+    <string name="about_info">bookappa - Apartment Booking Management\n\nVersion 1.0.0\n\nA simple apartment booking system for property managers.\n\nCopyright &#169; 2019 XDSoft\nMade by Lukaz Lim\nCU ID: 9856242</string>
+    <string name="contact_title">Contact Info</string>
+    <string name="contact_info_header1"><![CDATA[Phone & Email]]></string>
+    <string name="contact_info_header2">Address</string>
+    <string name="contact_info1">04–911 1337\ndancecardo@bookappa.my</string>
+    <string name="contact_info2">XDSoft HQ\n666 Meme Street\nLmoa Town 69420\nPulau Pinang</string>
+    <string name="booking_info_header">Accepted Values</string>
+    <string name="booking_info">Floor: 1 to 10\nUnit: 1 to 4\nName: 30 characters or less</string>
+    <string name="price_info1">Base Price: RM 420000\nSubsequent Floors: add RM 69000</string>
+    <string name="price_info2">Formula (in RM):\n420000 + (69000 * (Floor - 1))</string>
+    <string name="price_info3">e.g. Booking on 7th Floor\n420000 + (69000 * (7 - 1))\nPrice: RM 834000</string>
+
+    <string name="summary_label_apartment">Apartment</string>
+    <string name="summary_label_bookings">Bookings</string>
+    <string name="summary_label_revenue">Revenue</string>
+    <string name="summary_apartment_header1">Name:</string>
+    <string name="summary_apartment_header2">Size:</string>
+    <string name="summary_apartment_header3">Location:</string>
+    <string name="summary_bookings_header1">Units Booked:</string>
+    <string name="summary_bookings_header2">Unpaid:</string>
+    <string name="summary_bookings_header3">Paid:</string>
+    <string name="summary_revenue_header1">Earnings:</string>
+    <string name="summary_revenue_header2">Potential Gain:</string>
+    <string name="summary_apartment_info1">The Tallhome</string>
+    <string name="summary_apartment_info2">10 floors x 4 units x 1337 sq.ft</string>
+    <string name="summary_apartment_info3">666 Meme Street</string>
+</resources>
