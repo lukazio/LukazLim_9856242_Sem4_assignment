@@ -9,16 +9,6 @@ public class Booking {
     //Default constructor
     public Booking(){}
 
-    //Constructor
-    public Booking(long id, String owner, int paid, int floor, int unit){
-        this.id = id;
-        this.owner = owner;
-        this.paid = paid;
-        this.floor = floor;
-        this.unit = unit;
-        this.price = 420000*(69000*floor);
-    }
-
     //Getters
     public long getId() {return id;}
     public String getOwner() {return owner;}
