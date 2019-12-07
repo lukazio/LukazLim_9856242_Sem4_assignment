@@ -62,7 +62,7 @@ public class AboutActivity extends AppCompatActivity {
         Uri uri;
 
         switch(item.getItemId()){
-            case R.id.menu_contact:
+            case R.id.menu_contact: //Dial contact number in phone dialler
                 uri = Uri.parse("tel:+6049111337");
                 Intent contactIntent = new Intent(Intent.ACTION_DIAL,uri);
 
@@ -72,7 +72,7 @@ public class AboutActivity extends AppCompatActivity {
                     Log.d("DialImplicitIntent","Contact intent failed!");
 
                 break;
-            case R.id.menu_email:
+            case R.id.menu_email:   //Compose email in another email app
                 uri = Uri.fromParts("mailto","dancecardo@bookappa.my",null);
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO,uri);
 
@@ -82,7 +82,7 @@ public class AboutActivity extends AppCompatActivity {
                     Log.d("EmailImplicitIntent","Email intent failed!");
 
                 break;
-            case R.id.menu_location:
+            case R.id.menu_location:    //View headquarters location in mapping/location app
                 String location = "XDSoft Headquarters (doesn't exist, just to show implicit intent)";
                 uri = Uri.parse("geo:0,0?q=" + location);
                 Intent locationIntent = new Intent(Intent.ACTION_VIEW,uri);
@@ -93,7 +93,7 @@ public class AboutActivity extends AppCompatActivity {
                     Log.d("LocationImplicitIntent","Location intent failed!");
 
                 break;
-            case R.id.menu_share:
+            case R.id.menu_share:   //Share contact info as text to another app
                 String shareText = "XDSoft\n\nPhone: +6049111337\nEmail: dancecardo@bookappa.my\nAddress: 666 Meme Street, Lmoa Town";
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
@@ -102,7 +102,7 @@ public class AboutActivity extends AppCompatActivity {
                 if(shareIntent.resolveActivity(getPackageManager()) != null)
                     startActivity(Intent.createChooser(shareIntent,"Share contact info..."));
                 else
-                    Log.d("DialImplicitIntent","Contact intent failed!");
+                    Log.d("ShareImplicitIntent","Share intent failed!");
 
                 break;
         }

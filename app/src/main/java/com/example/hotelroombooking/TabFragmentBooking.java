@@ -127,11 +127,13 @@ public class TabFragmentBooking extends Fragment {
                 final int floor,unit;
                 final String owner;
 
+                //Make sure there are no empty fields
                 if(mEtFloor.getText().toString().isEmpty() || mEtUnit.getText().toString().isEmpty() || mEtName.getText().toString().trim().isEmpty()) {
                     Toast.makeText(mContext,"Please fill in all fields!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                //Parsing floor and unit string inputs into integers for their respective variables
                 try{
                     floor = Integer.parseInt(mEtFloor.getText().toString());
                     unit = Integer.parseInt(mEtUnit.getText().toString());
@@ -142,6 +144,7 @@ public class TabFragmentBooking extends Fragment {
                     return;
                 }
 
+                //Make sure floors and units are within the accepted range
                 if(floor<1 || floor>10 || unit<1 || unit>4)
                     Toast.makeText(mContext,"Floor and unit must be within the accepted range shown above!", Toast.LENGTH_SHORT).show();
                 else if(owner.length()>30)

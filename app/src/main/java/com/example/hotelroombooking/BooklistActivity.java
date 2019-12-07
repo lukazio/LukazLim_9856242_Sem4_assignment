@@ -43,6 +43,7 @@ public class BooklistActivity extends AppCompatActivity {
         super.onPause();
     }
 
+    //Filter to show only paid bookings
     public void btnShowPaid_onClick(View view) {
         setTitle(R.string.title_booklist_paid);
 
@@ -59,6 +60,7 @@ public class BooklistActivity extends AppCompatActivity {
         mRV.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    //Filter to show only unpaid bookings
     public void btnShowUnpaid_onClick(View view) {
         setTitle(R.string.title_booklist_unpaid);
 

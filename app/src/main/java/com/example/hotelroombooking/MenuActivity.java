@@ -38,11 +38,11 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
-            case R.id.menu_about:
+            case R.id.menu_about:   //Go to about activity
                 Intent aboutIntent = new Intent(this,AboutActivity.class);
                 startActivity(aboutIntent);
                 break;
-            case R.id.menu_logout:
+            case R.id.menu_logout:  //Logout user
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
                 alert.setTitle("Logout");
                 alert.setMessage("Are you sure you want to logout?");
@@ -75,16 +75,19 @@ public class MenuActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Go to Booking Activity
     public void btnBookUnit_onClick(View view) {
         Intent intent = new Intent(this,BookingActivity.class);
         startActivity(intent);
     }
 
+    //Go to Booking List Activity
     public void btnBookings_onClick(View view) {
         Intent intent = new Intent(this,BooklistActivity.class);
         startActivity(intent);
     }
 
+    //Go to Summary Activity
     public void btnSummary_onClick(View view) {
         Intent intent = new Intent(this,SummaryActivity.class);
         startActivity(intent);

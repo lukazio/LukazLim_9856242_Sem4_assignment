@@ -31,6 +31,7 @@ public class BookingDataSource {
         dbHelper.close();
     }
 
+    //Create a booking to be stored in the database
     public Booking createBooking(String owner, int paid, int floor, int unit, int price){
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_OWNER, owner);
@@ -48,16 +49,19 @@ public class BookingDataSource {
         return newBooking;
     }
 
+    //Remove selected booking from database
     public void deleteBooking(long id){
         db.delete(MySQLiteHelper.TABLE_BOOKINGS,MySQLiteHelper.COLUMN_ID + " = " + id,null);
     }
 
+    //Mark a selected booking as paid
     public void payBooking(long id){
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_PAID, 1);
         db.update(MySQLiteHelper.TABLE_BOOKINGS, values,MySQLiteHelper.COLUMN_ID + " = " + id,null);
     }
 
+    //Retrieve a single booking with its ID
     public Booking getBooking(long id){
         Cursor cursor = db.query(MySQLiteHelper.TABLE_BOOKINGS, dbAllColumns, MySQLiteHelper.COLUMN_ID + " = " + id,null,null,null,null);
 
@@ -67,6 +71,7 @@ public class BookingDataSource {
         return booking;
     }
 
+    //Retrieve all bookings from database
     public ArrayList<Booking> getAllBookings() {
         ArrayList<Booking> bookings = new ArrayList<>();
         Cursor cursor = db.query(MySQLiteHelper.TABLE_BOOKINGS, dbAllColumns, null, null, null, null, null);
@@ -82,6 +87,7 @@ public class BookingDataSource {
         return bookings;
     }
 
+    //Read a table row in the database
     private Booking cursorToBooking(Cursor cursor){
         Booking booking = new Booking();
 

@@ -80,6 +80,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
             bookingViewHolder.mDelete.setAlpha(1.0f);
         }
 
+        //On click listener for Paid checkbox
         bookingViewHolder.mPaid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +88,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                 alert.setTitle("Payment Confirmation");
                 alert.setMessage("Are you sure you want to mark this booking as paid?");
 
+                //Mark selected booking as paid
                 alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -110,6 +112,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                 alert.show();
             }
         });
+        //On click listener for Delete button
         bookingViewHolder.mDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,6 +120,7 @@ public class BookingListAdapter extends RecyclerView.Adapter<BookingListAdapter.
                 alert.setTitle("Delete Booking");
                 alert.setMessage("Are you sure you want to delete this booking?");
 
+                //Delete selected booking
                 alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
